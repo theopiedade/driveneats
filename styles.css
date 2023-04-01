@@ -113,3 +113,35 @@ body {
     line-height: 19px;
     color: #000000;
 }
+
+.bottom {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    width: 414px;
+    height: 92px;
+    left: 0px;
+    bottom: 0px;
+    background: #FFFFFF;
+}
+
+.bottom button {
+    width: 364px;
+    height: 53px;
+    left: 25px;
+    bottom: 16px;
+    background: #CBCBCB;
+    border-radius: 50px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    text-justify:distribute;
+    letter-spacing: 0.018em;
+
+    color: #FFFFFF;
+}
