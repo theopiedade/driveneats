@@ -37,3 +37,45 @@ function select(type,item,check) {
 
 }
 
+function send_select() {
+  const p1 = document.querySelector(".food .selected");
+  const p2 = document.querySelector(".drink .selected");
+  const p3 = document.querySelector(".deserve .selected");
+
+  if (p1 !== null && p2 !== null && p3 !== null) {
+      
+    var food = document.querySelector(".food .selected h1");
+    var food_select = food.textContent;
+    var food = document.querySelector(".food .selected h3");
+    var food_price = food.textContent;
+
+    var drink = document.querySelector(".drink .selected h1");
+    var drink_select = drink.textContent;
+    var drink = document.querySelector(".drink .selected h3");
+    var drink_price = drink.textContent;
+
+    var deserve = document.querySelector(".deserve .selected h1");
+    var deserve_select = deserve.textContent;
+    var deserve = document.querySelector(".deserve .selected h3");
+    var deserve_price = deserve.textContent;
+  
+    var food_price_treat = food_price.replace(",",".");
+    food_price_treat = food_price_treat.slice(3,food_price_treat.length);
+
+    var drink_price_treat = drink_price.replace(",",".");
+    drink_price_treat = drink_price_treat.slice(3,drink_price_treat.length);
+
+    var deserve_price_treat = deserve_price.replace(",",".");
+    deserve_price_treat = deserve_price_treat.slice(3,deserve_price_treat.length);
+    
+    const total_price = parseFloat(food_price_treat) + parseFloat(drink_price_treat) + parseFloat(deserve_price_treat);
+    alert("Preço total: "+total_price);
+
+    var text_message = "Olá, gostaria de fazer o pedido: \n - Prato: "+food_select+" "+food_price+"\n - Bebida: "+drink_select+" "+drink_price+"\n - Sobremesa: "+deserve_select+" "+deserve_price+"\n Total: R$"+total_price;
+    alert(text_message);
+  }
+  else {
+    alert("Primeiro selecione os 3 itens");
+  }
+
+}
