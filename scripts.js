@@ -70,11 +70,10 @@ function send_select() {
     
     const total_price = parseFloat(food_price_treat) + parseFloat(drink_price_treat) + parseFloat(deserve_price_treat);
     var total_price_complete = total_price.toFixed(2);
-    alert("Preço total: "+total_price_complete);
+        
+    let urlmsg = "https://wa.me/5582991525400?text=" + encodeURIComponent(`Olá, gostaria de fazer o pedido:\n- Prato: ${food_select}\n- Bebida: ${drink_select}\n- Sobremesa : ${deserve_select}\nTotal: ${total_price_complete}`);
+    window.open(urlmsg);
     
-
-    var text_message = "Olá, gostaria de fazer o pedido: \n - Prato: "+food_select+" "+food_price+"\n - Bebida: "+drink_select+" "+drink_price+"\n - Sobremesa: "+deserve_select+" "+deserve_price+"\n Total: R$"+total_price_complete;
-    alert(text_message);
   }
   else {
     alert("Primeiro selecione os 3 itens");
