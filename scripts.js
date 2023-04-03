@@ -69,9 +69,11 @@ function send_select() {
     deserve_price_treat = deserve_price_treat.slice(3,deserve_price_treat.length);
     
     const total_price = parseFloat(food_price_treat) + parseFloat(drink_price_treat) + parseFloat(deserve_price_treat);
-    alert("Preço total: "+total_price);
+    var total_price_complete = total_price.toFixed(2);
+    alert("Preço total: "+total_price_complete);
+    
 
-    var text_message = "Olá, gostaria de fazer o pedido: \n - Prato: "+food_select+" "+food_price+"\n - Bebida: "+drink_select+" "+drink_price+"\n - Sobremesa: "+deserve_select+" "+deserve_price+"\n Total: R$"+total_price;
+    var text_message = "Olá, gostaria de fazer o pedido: \n - Prato: "+food_select+" "+food_price+"\n - Bebida: "+drink_select+" "+drink_price+"\n - Sobremesa: "+deserve_select+" "+deserve_price+"\n Total: R$"+total_price_complete;
     alert(text_message);
   }
   else {
