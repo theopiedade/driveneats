@@ -20,5 +20,20 @@ function select(type,item,check) {
     c2.classList.toggle('checked');
   }
 
+  const p1 = document.querySelector(".food .selected");
+  const p2 = document.querySelector(".drink .selected");
+  const p3 = document.querySelector(".deserve .selected");
+
+  const bs = document.querySelector(".button_unchecked");
+
+  if (p1 !== null && p2 !== null && p3 !== null) {
+    bs.classList.add('button_checked');
+    bs.innerHTML = 'Fechar pedido';
+  }
+  else if (document.querySelector(".button_checked") !== null) {
+    bs.classList.remove('button_checked');
+    bs.innerHTML = 'Selecione os 3 itens <br> para fechar o produto';
+  }
+
 }
 

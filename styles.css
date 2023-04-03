@@ -167,7 +167,7 @@ ion-icon {
     background: #FFFFFF;
 }
 
-.bottom button {
+.button_unchecked {
     width: 364px;
     height: 61px;
     left: 25px;
@@ -182,6 +182,23 @@ ion-icon {
     text-align: center;
     text-size-adjust: ;
     letter-spacing: 0.018em;
+    color: #FFFFFF;
+}
 
+.button_checked {
+    width: 364px;
+    height: 61px;
+    left: 25px;
+    bottom: 16px;
+    background: #32B72F;
+    border-radius: 50px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    text-size-adjust: ;
+    letter-spacing: 0.018em;
     color: #FFFFFF;
 }
